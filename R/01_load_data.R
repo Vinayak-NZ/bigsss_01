@@ -1,3 +1,3 @@
-data_input_comp <- read.spss("data/Merged.sav", 
+data_input_merged <- read.spss("input/Merged.sav", 
                              use.value.labels = FALSE,
                              to.data.frame = TRUE)
