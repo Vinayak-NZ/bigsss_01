@@ -1,0 +1,8 @@
+1) Variables to use & Type of variable
+
+2) Formatting required?
+
+3) Data dictionary
+
+4) Model being built: Mixed effects model
+- note down model/ models
