@@ -1,7 +1,10 @@
+## ---- specify-models
 
-model_01 <- WFI ~ Group*time + SCON*time + Age + v_236 + (1|id)
+model_01 <- WFI ~ Group*time + SCON*time + stress + Age + sex + (1 | id)
   
-model_02 <- SCON ~ Group*time + Age + v_236 + (1|id)
+model_02 <- SCON ~ Group*time + stress + Age + v_236 + (1 | id)
+
+## ---- run-models
 
 mice_models_01 <- list()
 
@@ -24,6 +27,8 @@ for (mm in 1:M){
   mice_models_summary_02[[mm]] <- summary(mice_models_02[[mm]])$coefficients[2]
   
 }
+
+## ---- pool-models
 
 mice_pooled_model_01 <- lmer_pool(mice_models_01, level = .95)
 

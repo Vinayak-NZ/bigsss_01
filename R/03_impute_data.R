@@ -10,7 +10,7 @@ data_impute_input <- data_input[, vars_to_impute]
 
 # impute data
 data_imputed <- mice(data_impute_input, 
-                     m = 5, 
+                     m = 35, 
                      maxit = 33, 
                      seed = 123)
 

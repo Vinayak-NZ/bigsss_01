@@ -6,6 +6,7 @@ for (i in 1:length(data_imputed_output)){
                                                            "Group", 
                                                            "Age", 
                                                            "v_236", 
+                                                           "v_534",
                                                            "SCON_T1", 
                                                            "SCON_T2", 
                                                            "WFI_T1", 
@@ -17,7 +18,8 @@ for (i in 1:length(data_imputed_output)){
                                    id.vars = c("id", 
                                                "Group", 
                                                "Age", 
-                                               "v_236"), 
+                                               "v_236", 
+                                               "v_534"), 
                                    measure.vars = list(c("SCON_T1", "SCON_T2"), c("WFI_T1", "WFI_T2")),
                                    variable.name = "time", 
                                    value.name = c("SCON", "WFI"))
@@ -28,11 +30,17 @@ for (i in 1:length(data_imputed_output)){
   data_imputed_output[[i]]$time <- as.factor(data_imputed_output[[i]]$time)
   
   data_imputed_output[[i]]$sex <- as.factor(data_imputed_output[[i]]$v_236)
+
+  data_imputed_output[[i]][["stress"]] <- abs(as.numeric(data_imputed_output[[i]][["v_534"]]))
   
   data_imputed_output[[i]][["SCON"]] <- abs(as.numeric(data_imputed_output[[i]][["SCON"]]))
   
   data_imputed_output[[i]][["WFI"]] <- abs(as.numeric(data_imputed_output[[i]][["WFI"]]))
   
   data_imputed_output[[i]] <- as.data.frame(data_imputed_output[[i]])
+  
+  data_imputed_output[[i]]$.id <- data_imputed_output[[i]]$id
+
+  data_imputed_output[[i]]$.imp <- i  
   
 }
