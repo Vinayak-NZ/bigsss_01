@@ -1,0 +1,38 @@
+
+model_01 <- WFI ~ Group*time + SCON*time + Age + v_236 + (1|id)
+  
+model_02 <- SCON ~ Group*time + Age + v_236 + (1|id)
+
+mice_models_01 <- list()
+
+mice_models_02 <- list()
+
+mice_models_summary_01 <- list()
+
+mice_models_summary_02 <- list()
+
+M <- length(data_imputed_output)
+
+for (mm in 1:M){
+  
+  mice_models_01[[mm]] <- lme4::lmer(model_01, data = data_imputed_output[[mm]], REML=FALSE)
+  
+  mice_models_summary_01[[mm]] <- summary(mice_models_01[[mm]])$coefficients[2]
+  
+  mice_models_02[[mm]] <- lme4::lmer(model_02, data = data_imputed_output[[mm]], REML=FALSE)
+  
+  mice_models_summary_02[[mm]] <- summary(mice_models_02[[mm]])$coefficients[2]
+  
+}
+
+mice_pooled_model_01 <- lmer_pool(mice_models_01, level = .95)
+
+mice_pooled_model_02 <- lmer_pool(mice_models_02, level = .95)
+
+mice_pooled_output_model_01 <- summary(mice_pooled_model_01)
+
+mice_pooled_output_model_02 <- summary(mice_pooled_model_02)
+
+mice_treatment_effect_model_01 <- unlist(mice_models_summary_01, use.names=FALSE)
+
+mice_treatment_effect_model_02 <- unlist(mice_models_summary_02, use.names=FALSE)
