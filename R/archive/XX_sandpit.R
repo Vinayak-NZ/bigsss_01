@@ -50,3 +50,72 @@ model_brm_quad_test <- brm(WFI ~ I(SCON^2),
                                   iter = 1000)
 
 summary(model_brm_quad_test)
+
+library(mediation)
+
+# Path a: Does the intervention increase self-control?
+model_a <- lmer(SCON ~ Group*time + (1 | id), data = data_imputed_pooled_all)
+
+# Path b: Does self-control affect WtFI?
+model_b <- lmer(WFI ~ SCON*time + Group*time + (1 | id), data = data_imputed_pooled_all)
+
+# Multilevel mediation model
+med_model <- mediate(model_a, model_b, treat = "Group", mediator = "SCON",
+                     boot = FALSE, sims = 5000)
+
+# Summary of mediation results
+summary(med_model)
+
+cor(data_imputed_pooled_all$WFI, data_imputed_pooled_all$SCON)
+
+library(lavaan)
+
+model_multigroup <- '
+  # Structural paths
+  WFI_T2_imp ~ WFI_T1 + SCON_T1 + v_534 + SCON_T2_imp
+  
+  # Covariances among predictors
+  SCON_T1 ~~ v_534
+  SCON_T1 ~~ WFI_T1
+  v_534 ~~ WFI_T1
+  
+  # Explicit variances (helps with estimation issues)
+  WFI_T1 ~~ WFI_T1
+  SCON_T1 ~~ SCON_T1
+  v_534 ~~ v_534
+  SCON_T2_imp ~~ SCON_T2_imp
+'
+
+data_imputed_pooled$v_534 <- factor(data_imputed_pooled$v_534, 
+                                       order = TRUE, 
+                                       levels = c(1, 2, 3, 4, 5))
+
+# Fit model with group comparison
+fit_multi <- sem(model_multigroup, 
+                 data = data_imputed_pooled, 
+                 group = "Group", 
+                 estimator = "WLSMV")
+
+fit <- sem(model_multigroup, data = data_imputed_pooled, representation = "RAM")
+
+
+# Show group comparison results
+summary(fit_multi, fit.measures = TRUE, standardized = TRUE, ci = TRUE)
+
+
+
+
+
+
+
+library(lavaan)
+
+# Define the model explicitly
+model_multigroup <- 
+
+# Run model in lavaan with robust estimation
+fit <- sem(model_multigroup, data = mydata, estimator = "MLM", fixed.x = TRUE)
+
+# Show summary with standardized estimates and confidence intervals
+summary(fit, fit.measures = TRUE, standardized = TRUE, ci = TRUE)
+

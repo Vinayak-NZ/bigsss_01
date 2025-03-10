@@ -43,8 +43,8 @@ data_input <- data_input_merged[, c("id",
 data_input$SCON_T2 <- ifelse(data_input$SCON_T2 < 0, NA, 
                              data_input$SCON_T2)
 
-data_input$v_534 <- as.factor(data_input$v_534)
+data_input$v_534 <- factor(data_input$v_534, order = TRUE, levels = c(1, 2, 3, 4, 5))
 
-data_input$v_534_P1 <- as.factor(data_input$v_534_P1)
+data_input$v_534_P1 <- factor(data_input$v_534_P1, order = TRUE, levels = c(1, 2, 3, 4, 5))
 
 rownames(data_input) <- NULL

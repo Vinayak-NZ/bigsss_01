@@ -19,6 +19,8 @@ data_imputed_pooled <- merge_imputations(data_impute_input,
                                          data_imputed,
                                          ori = data_impute_input)
 
+data_imputed_pooled <- cbind(data_input[, exclude_vars], data_imputed_pooled)
+
 # create mice output
 data_imputed_output <- list()
 

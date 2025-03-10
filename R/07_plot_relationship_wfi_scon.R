@@ -15,18 +15,3 @@ ggplot(data_imputed_pooled_all, aes(x = SCON, y = WFI)) +
         plot.subtitle = element_text(color = "#454543"),
         plot.caption = element_text(color = "#454543", face = "italic"), 
         legend.position = "none") 
-
-
-
-
-labs(title = paste0("Average life expectancy in Germany"), 
-     subtitle = "Line chart of changes in life expectancy",
-     caption = "Data source: Statistisches Bundesamt") +
-  ylab("Life expectancy \n(age 0)") + 
-  xlab("Year") + 
-  ylim(50, 100) +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"), 
-        plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
-        plot.subtitle = element_text(color = "#454543"),
-        plot.caption = element_text(color = "#454543", face = "italic")) 
