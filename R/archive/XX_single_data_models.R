@@ -39,7 +39,16 @@ data_imputed_pooled_all[["WFI"]] <- abs(as.numeric(data_imputed_pooled_all[["WFI
 
 data_imputed_pooled_all <- as.data.frame(data_imputed_pooled_all)
 
-test_model_01 <- lme4::lmer(WFI ~ Group*time + SCON*time + stress + Age + sex + (1 | id), 
+data_imputed_pooled_all$SCON_Cat <- cut(data_imputed_pooled_all$SCON, 
+                       breaks = c(1, 4, 7, 11), 
+                       labels = c("Low", "Medium", "High"),
+                       include.lowest = TRUE)
+
+test_model_01 <- lme4::lmer(WFI ~ Group*time*SCON + stress + Age + sex + (1 | id), 
+                            data = data_imputed_pooled_all, 
+                            REML=FALSE)
+
+test_model_01_cat <- lme4::lmer(WFI ~ Group*time*SCON_Cat + stress + Age + sex + (1 | id), 
                             data = data_imputed_pooled_all, 
                             REML=FALSE)
 

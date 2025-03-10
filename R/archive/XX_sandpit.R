@@ -103,11 +103,6 @@ fit <- sem(model_multigroup, data = data_imputed_pooled, representation = "RAM")
 summary(fit_multi, fit.measures = TRUE, standardized = TRUE, ci = TRUE)
 
 
-
-
-
-
-
 library(lavaan)
 
 # Define the model explicitly
@@ -119,3 +114,13 @@ fit <- sem(model_multigroup, data = mydata, estimator = "MLM", fixed.x = TRUE)
 # Show summary with standardized estimates and confidence intervals
 summary(fit, fit.measures = TRUE, standardized = TRUE, ci = TRUE)
 
+model_poly_interaction <- lmer(WFI ~ SCON + I(SCON^2) + 
+                                 Group * time * SCON + 
+                                 Group * time * I(SCON^2) + 
+                                 stress + Age + sex + (1 | id), 
+                               data = data_imputed_pooled_all)
+
+library(lmerTest)
+summary(model_poly_interaction)
+
+anova(test_model_01, model_poly_interaction)
