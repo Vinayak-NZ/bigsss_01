@@ -46,3 +46,5 @@ data_input$SCON_T2 <- ifelse(data_input$SCON_T2 < 0, NA,
 data_input$v_534 <- as.factor(data_input$v_534)
 
 data_input$v_534_P1 <- as.factor(data_input$v_534_P1)
+
+rownames(data_input) <- NULL

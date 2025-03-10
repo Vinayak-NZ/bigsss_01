@@ -2,7 +2,7 @@
 
 model_01 <- WFI ~ Group*time + SCON*time + stress + Age + sex + (1 | id)
   
-model_02 <- SCON ~ Group*time + stress + Age + v_236 + (1 | id)
+model_02 <- SCON ~ Group*time + stress + Age + sex + (1 | id)
 
 ## ---- run-models
 
