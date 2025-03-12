@@ -18,15 +18,30 @@ M <- length(data_imputed_output)
 
 for (mm in 1:M){
   
-  mice_models_01[[mm]] <- lme4::lmer(model_01, data = data_imputed_output[[mm]], REML=FALSE)
+  mice_models_01[[mm]] <- lme4::glmer(model_01, 
+                                     data = data_imputed_output[[mm]], 
+                                     family = gaussian(link = "log"),
+                                     control = glmerControl(optimizer = "nloptwrap", calc.derivs = FALSE))
   
   mice_models_summary_01[[mm]] <- summary(mice_models_01[[mm]])$coefficients[2]
   
-  mice_models_02[[mm]] <- lme4::lmer(model_02, data = data_imputed_output[[mm]], REML=FALSE)
+  mice_models_02[[mm]] <- lme4::glmer(model_02, 
+                                     data = data_imputed_output[[mm]], 
+                                     family = Gamma(link = "log"), 
+                                     control = glmerControl(optimizer = "nloptwrap", calc.derivs = FALSE))
   
   mice_models_summary_02[[mm]] <- summary(mice_models_02[[mm]])$coefficients[2]
   
 }
+
+
+saveRDS(mice_models_01, file = "output/model_01_list.RData")
+
+saveRDS(mice_models_02, file = "output/model_02_list.RData")
+
+saveRDS(mice_models_summary_01, file = "output/model_01_summary.RData")
+
+saveRDS(mice_models_summary_02, file = "output/model_02_summary.RData")
 
 ## ---- pool-models
 
@@ -44,12 +59,18 @@ mice_treatment_effect_model_02 <- unlist(mice_models_summary_02, use.names=FALSE
 
 ## ---- single-data-models-01
 
-sd_model_01 <- lme4::lmer(SCON ~ Group*time + stress + Age + sex + (1 | id), 
-                            data = data_imputed_pooled_all, 
-                            REML=FALSE)
+sd_model_01 <- lme4::glmer(SCON ~ Group*time + stress + Age + sex + (1 | id), 
+                           data = data_imputed_output[[mm]], 
+                           family = gaussian(link = "log"),
+                           control = glmerControl(optimizer = "nloptwrap", calc.derivs = FALSE))
+
+summary(sd_model_01)
 
 ## ---- single-data-models-02
 
-sd_model_02 <- lme4::lmer(WFI ~ Group*time*I(SCON^2) + Group*time*SCON + stress + age_cat + sex + (1 | id), 
-                            data = data_imputed_pooled_all, 
-                            REML=FALSE)
+sd_model_02 <- lme4::glmer(WFI ~ Group*time*I(SCON^2) + Group*time*SCON + stress + age_cat + sex + (1 | id), 
+                           data = data_imputed_output[[mm]], 
+                           family = Gamma(link = "log"), 
+                           control = glmerControl(optimizer = "nloptwrap", calc.derivs = FALSE))
+
+summary(sd_model_02)

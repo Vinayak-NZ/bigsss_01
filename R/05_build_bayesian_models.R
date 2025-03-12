@@ -24,4 +24,4 @@ model_brm_02 <- brm(WFI ~ Group*time*I(SCON^2) + Group*time*SCON + stress + age_
                     warmup = 500, 
                     control = list(adapt_delta = 0.8))
 
-saveRDS(model_brm_02, file = "output/model_brm_02.rds")
+saveRDS(model_brm_02, file = "output/model_brm_02_2025_03_12.rds")

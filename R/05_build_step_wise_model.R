@@ -1,12 +1,18 @@
 ## ----step-wise-modelling
 
+data_imputed_pooled_all$SCON_scaled <- scale(data_imputed_pooled_all$SCON)
+
 # linear-model
-model_linear <- lmer(WFI ~ Group*time*SCON + stress + age_cat + sex + (1 | id), 
-                data = data_imputed_pooled_all)
+model_linear <- glmer(WFI ~ Group*time*SCON_scaled + stress + age_cat + sex + (1 | id), 
+                     family = Gamma(link = "log"), 
+                     data = data_imputed_pooled_all, 
+                     control = glmerControl(optimizer = "bobyqa"))
 
 # non-linear-model
-model_non_linear <- lmer(WFI ~ Group*time*I(SCON^2) + Group*time*SCON + stress + age_cat + sex + (1 | id), 
-                     data = data_imputed_pooled_all)
+model_non_linear <- glmer(WFI ~ Group*time*I(SCON_scaled^2) + Group*time*SCON_scaled + stress + age_cat + sex + (1 | id), 
+                         family = Gamma(link = "log"), 
+                         data = data_imputed_pooled_all, 
+                         control = glmerControl(optimizer = "nloptwrap", calc.derivs = FALSE))
 
 # Compare models using ANOVA
 anova(model_linear, model_non_linear)
