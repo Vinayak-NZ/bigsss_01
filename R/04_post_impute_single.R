@@ -27,14 +27,27 @@ data_imputed_pooled_all <- melt(data_imputed_pooled_all,
 data_imputed_pooled_all[, "time"] <- ifelse(data_imputed_pooled_all[, "time"] == 1, 
                                             "baseline", "follow-up")
 
-data_imputed_pooled_all$time <- as.factor(data_imputed_pooled_all$time)
+data_imputed_pooled_all[["time"]] <- as.factor(data_imputed_pooled_all[["time"]])
 
-data_imputed_pooled_all$sex <- as.factor(data_imputed_output[[i]]$v_236)
+data_imputed_pooled_all[["sex"]] <- as.factor(data_imputed_pooled_all[["v_236"]])
 
 data_imputed_pooled_all[["stress"]] <- abs(as.numeric(data_imputed_pooled_all[["v_534"]]))
 
-data_imputed_pooled_all[["SCON"]] <- abs(as.numeric(data_imputed_pooled_all[["SCON"]]))
-
 data_imputed_pooled_all[["WFI"]] <- abs(as.numeric(data_imputed_pooled_all[["WFI"]]))
+
+data_imputed_pooled_all[["age_cat"]] <- 
+  ifelse(data_imputed_pooled_all[["Age"]] < 31, 1, 
+         ifelse(data_imputed_pooled_all[["Age"]] >= 31 & 
+                  data_imputed_pooled_all[["Age"]] < 41, 2, 
+                ifelse(data_imputed_pooled_all[["Age"]] >= 41 & 
+                         data_imputed_pooled_all[["Age"]] < 51, 3, 4)))
+
+data_imputed_pooled_all[["age_cat"]] <- factor(data_imputed_pooled_all[["age_cat"]], 
+                                           order = TRUE, 
+                                           levels = c(1, 2, 3, 4))
+
+data_imputed_pooled_all[["stress"]] <- factor(data_imputed_pooled_all[["v_534"]], 
+                                               order = TRUE, 
+                                               levels = c(1, 2, 3, 4, 5))
 
 data_imputed_pooled_all <- as.data.frame(data_imputed_pooled_all)

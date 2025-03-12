@@ -124,3 +124,13 @@ library(lmerTest)
 summary(model_poly_interaction)
 
 anova(test_model_01, model_poly_interaction)
+
+
+
+
+model_stress <- lmer(WFI ~ Group*time*stress + age_cat + sex + (1 | id), 
+                     data = data_imputed_pooled_all)
+
+summary(model_stress)
+
+
