@@ -1,0 +1,248 @@
+Warning messages:
+1: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+2: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+3: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+4: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+5: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+6: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+7: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+8: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+9: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+10: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+11: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+12: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+13: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+14: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+15: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+16: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+17: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+18: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+19: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+20: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+21: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+22: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+23: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+24: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+25: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+26: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+27: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+28: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+29: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+30: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+31: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+32: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+33: In vcov(object, use.hessian = use.hessian) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+34: In vcov.merMod(object, correlation = correlation, sigm = sig) :
+  variance-covariance matrix computed from finite-difference Hessian is
+not positive definite or contains NA values: falling back to var-cov estimated from RX
+
+ iter imp variable
+  1   1  v_534_P1  WFI_T2  SCON_T2
+  1   2  v_534_P1  WFI_T2  SCON_T2
+  1   3  v_534_P1  WFI_T2  SCON_T2
+  1   4  v_534_P1  WFI_T2  SCON_T2
+  1   5  v_534_P1  WFI_T2  SCON_T2
+  1   6  v_534_P1  WFI_T2  SCON_T2
+  1   7  v_534_P1  WFI_T2  SCON_T2
+  1   8  v_534_P1  WFI_T2  SCON_T2
+  1   9  v_534_P1  WFI_T2  SCON_T2
+  1   10  v_534_P1  WFI_T2  SCON_T2
+  1   11  v_534_P1  WFI_T2  SCON_T2
+  1   12  v_534_P1  WFI_T2  SCON_T2
+  1   13  v_534_P1  WFI_T2  SCON_T2
+  1   14  v_534_P1  WFI_T2  SCON_T2
+  1   15  v_534_P1  WFI_T2  SCON_T2
+  1   16  v_534_P1  WFI_T2  SCON_T2
+  1   17  v_534_P1  WFI_T2  SCON_T2
+  1   18  v_534_P1  WFI_T2  SCON_T2
+  1   19  v_534_P1  WFI_T2  SCON_T2
+  1   20  v_534_P1  WFI_T2  SCON_T2
+  1   21  v_534_P1  WFI_T2  SCON_T2
+  1   22  v_534_P1  WFI_T2  SCON_T2
+  1   23  v_534_P1  WFI_T2  SCON_T2
+  1   24  v_534_P1  WFI_T2  SCON_T2
+  1   25  v_534_P1  WFI_T2  SCON_T2
+  1   26  v_534_P1  WFI_T2  SCON_T2
+  1   27  v_534_P1  WFI_T2  SCON_T2
+  1   28  v_534_P1  WFI_T2  SCON_T2
+  1   29  v_534_P1  WFI_T2  SCON_T2
+  1   30  v_534_P1  WFI_T2  SCON_T2
+  1   31  v_534_P1  WFI_T2  SCON_T2
+  1   32  v_534_P1  WFI_T2  SCON_T2
+  1   33  v_534_P1  WFI_T2  SCON_T2
+  1   34  v_534_P1  WFI_T2  SCON_T2
+  1   35  v_534_P1  WFI_T2  SCON_T2
+  2   1  v_534_P1  WFI_T2  SCON_T2
+  2   2  v_534_P1  WFI_T2  SCON_T2
+  2   3  v_534_P1  WFI_T2  SCON_T2
+  2   4  v_534_P1  WFI_T2  SCON_T2
+  2   5  v_534_P1  WFI_T2  SCON_T2
+  2   6  v_534_P1  WFI_T2  SCON_T2
+  2   7  v_534_P1  WFI_T2  SCON_T2
+  2   8  v_534_P1  WFI_T2  SCON_T2
+  2   9  v_534_P1  WFI_T2  SCON_T2
+  2   10  v_534_P1  WFI_T2  SCON_T2
+  2   11  v_534_P1  WFI_T2  SCON_T2
+  2   12  v_534_P1  WFI_T2  SCON_T2
+  2   13  v_534_P1  WFI_T2  SCON_T2
+  2   14  v_534_P1  WFI_T2  SCON_T2
+  2   15  v_534_P1  WFI_T2  SCON_T2
+  2   16  v_534_P1  WFI_T2  SCON_T2
+  2   17  v_534_P1  WFI_T2  SCON_T2
+  2   18  v_534_P1  WFI_T2  SCON_T2
+  2   19  v_534_P1  WFI_T2  SCON_T2
+  2   20  v_534_P1  WFI_T2  SCON_T2
+  2   21  v_534_P1  WFI_T2  SCON_T2
+  2   22  v_534_P1  WFI_T2  SCON_T2
+  2   23  v_534_P1  WFI_T2  SCON_T2
+  2   24  v_534_P1  WFI_T2  SCON_T2
+  2   25  v_534_P1  WFI_T2  SCON_T2
+  2   26  v_534_P1  WFI_T2  SCON_T2
+  2   27  v_534_P1  WFI_T2  SCON_T2
+  2   28  v_534_P1  WFI_T2  SCON_T2
+  2   29  v_534_P1  WFI_T2  SCON_T2
+  2   30  v_534_P1  WFI_T2  SCON_T2
+  2   31  v_534_P1  WFI_T2  SCON_T2
+  2   32  v_534_P1  WFI_T2  SCON_T2
+  2   33  v_534_P1  WFI_T2  SCON_T2
+  2   34  v_534_P1  WFI_T2  SCON_T2
+  2   35  v_534_P1  WFI_T2  SCON_T2
+  3   1  v_534_P1  WFI_T2  SCON_T2
+  3   2  v_534_P1  WFI_T2  SCON_T2
+  3   3  v_534_P1  WFI_T2  SCON_T2
+  3   4  v_534_P1  WFI_T2  SCON_T2
+  3   5  v_534_P1  WFI_T2  SCON_T2
+  3   6  v_534_P1  WFI_T2  SCON_T2
+  3   7  v_534_P1  WFI_T2  SCON_T2
+  3   8  v_534_P1  WFI_T2  SCON_T2
+  3   9  v_534_P1  WFI_T2  SCON_T2
+  3   10  v_534_P1  WFI_T2  SCON_T2
+  3   11  v_534_P1  WFI_T2  SCON_T2
+  3   12  v_534_P1  WFI_T2  SCON_T2
+  3   13  v_534_P1  WFI_T2  SCON_T2
+  3   14  v_534_P1  WFI_T2  SCON_T2
+  3   15  v_534_P1  WFI_T2  SCON_T2
+  3   16  v_534_P1  WFI_T2  SCON_T2
+  3   17  v_534_P1  WFI_T2  SCON_T2
+  3   18  v_534_P1  WFI_T2  SCON_T2
+  3   19  v_534_P1  WFI_T2  SCON_T2
+  3   20  v_534_P1  WFI_T2  SCON_T2
+  3   21  v_534_P1  WFI_T2  SCON_T2
+  3   22  v_534_P1  WFI_T2  SCON_T2
+  3   23  v_534_P1  WFI_T2  SCON_T2
+  3   24  v_534_P1  WFI_T2  SCON_T2
+  3   25  v_534_P1  WFI_T2  SCON_T2
+  3   26  v_534_P1  WFI_T2  SCON_T2
+  3   27  v_534_P1  WFI_T2  SCON_T2
+  3   28  v_534_P1  WFI_T2  SCON_T2
+  3   29  v_534_P1  WFI_T2  SCON_T2
+  3   30  v_534_P1  WFI_T2  SCON_T2
+  3   31  v_534_P1  WFI_T2  SCON_T2
+  3   32  v_534_P1  WFI_T2  SCON_T2
+  3   33  v_534_P1  WFI_T2  SCON_T2
+  3   34  v_534_P1  WFI_T2  SCON_T2
+  3   35  v_534_P1  WFI_T2  SCON_T2
+  4   1  v_534_P1  WFI_T2  SCON_T2
+  4   2  v_534_P1  WFI_T2  SCON_T2
+  4   3  v_534_P1  WFI_T2  SCON_T2
+  4   4  v_534_P1  WFI_T2  SCON_T2
+  4   5  v_534_P1  WFI_T2  SCON_T2
+  4   6  v_534_P1  WFI_T2  SCON_T2
+  4   7  v_534_P1  WFI_T2  SCON_T2
+  4   8  v_534_P1  WFI_T2  SCON_T2
+  4   9  v_534_P1  WFI_T2  SCON_T2
+  4   10  v_534_P1  WFI_T2  SCON_T2
+  4   11  v_534_P1  WFI_T2  SCON_T2
+  4   12  v_534_P1  WFI_T2  SCON_T2
+  4   13  v_534_P1  WFI_T2  SCON_T2
+  4   14  v_534_P1  WFI_T2  SCON_T2
+  4   15  v_534_P1  WFI_T2  SCON_T2
+  4   16  v_534_P1  WFI_T2  SCON_T2
+  4   17  v_534_P1  WFI_T2  SCON_T2
+  4   18  v_534_P1  WFI_T2  SCON_T2
+  4   19  v_534_P1  WFI_T2  SCON_T2
+  4   20  v_534_P1  WFI_T2  SCON_T2
+  4   21  v_534_P1  WFI_T2  SCON_T2
+  4   22  v_534_P1  WFI_T2  SCON_T2
+  4   23  v_534_P1  WFI_T2  SCON_T2
+  4   24  v_534_P1  WFI_T2  SCON_T2
+  4   25  v_534_P1  WFI_T2  SCON_T2
+  4   26  v_534_P1  WFI_T2  SCON_T2
+  4   27  v_534_P1  WFI_T2  SCON_T2
+  4   28  v_534_P1  WFI_T2  SCON_T2
+  4   29  v_534_P1  WFI_T2  SCON_T2
+  4   30  v_534_P1  WFI_T2  SCON_T2
+  4   31  v_534_P1  WFI_T2  SCON_T2
+  4   32  v_534_P1  WFI_T2  SCON_T2
+  4   33  v_534_P1  WFI_T2  SCON_T2
+  4   34  v_534_P1  WFI_T2  SCON_T2
+  4   35  v_534_P1  WFI_T2  SCON_T2
+  5   1  v_534_P1  WFI_T2  SCON_T2
+  5   2  v_534_P1  WFI_T2  SCON_T2
+  5   3  v_534_P1

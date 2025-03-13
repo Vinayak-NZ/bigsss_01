@@ -9,7 +9,7 @@ source("R/04_post_impute_single.R")
 
 ## ---- build-mixed-effects-models
 
-source("R/05_build_mixed_effects_models.R")
+source("R/05_build_mixed_effects_models_pool.R")
 source("R/06_assumptions_test_mixed_effects.R")
 
 ## ---- build-bayesian-models

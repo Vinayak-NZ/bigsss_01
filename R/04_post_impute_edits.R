@@ -26,7 +26,9 @@ for (i in 1:length(data_imputed_output)){
   
   data_imputed_output[[i]][, "time"] <- ifelse(data_imputed_output[[i]][, "time"] == 1, 
                                                "baseline", "follow-up")
-  
+
+  data_imputed_output[[i]]$group <- as.factor(data_imputed_output[[i]]$Group)
+    
   data_imputed_output[[i]]$time <- as.factor(data_imputed_output[[i]]$time)
   
   data_imputed_output[[i]]$sex <- as.factor(data_imputed_output[[i]]$v_236)
@@ -56,6 +58,18 @@ for (i in 1:length(data_imputed_output)){
   
   data_imputed_output[[i]]$.id <- data_imputed_output[[i]]$id
 
-  data_imputed_output[[i]]$.imp <- i  
+  data_imputed_output[[i]]$.imp <- i 
+  
+  data_imputed_output[[i]] <- data_imputed_output[[i]][, c(".imp", 
+                                                           ".id", 
+                                                           "id", 
+                                                           "group", 
+                                                           "sex", 
+                                                           "age_cat", 
+                                                           "time", 
+                                                           "stress", 
+                                                           "SCON", 
+                                                           "WFI")]
+  
   
 }
