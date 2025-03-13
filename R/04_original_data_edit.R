@@ -70,3 +70,5 @@ original_data <- original_data[, c(".imp",
                                    "stress", 
                                    "SCON", 
                                    "WFI")]
+
+original_data$SCON_scaled <- scale(original_data$SCON)[,1]

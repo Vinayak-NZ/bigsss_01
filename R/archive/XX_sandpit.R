@@ -134,3 +134,19 @@ model_stress <- lmer(WFI ~ Group*time*stress + age_cat + sex + (1 | id),
 summary(model_stress)
 
 
+data_imputed_pooled_all$WFI_log <- log(data_imputed_pooled_all$WFI + 1)
+
+model_trans <- lmer(WFI_log ~ group*time*I(SCON_scaled^2) + group*time*SCON_scaled + stress + age_cat + sex + (1 | id), 
+                               data = data_imputed_pooled_all)
+
+summary(model_trans)
+
+
+data_imputed_pooled_all$SCON_group <- 
+  ifelse(data_imputed_pooled_all$SCON %in% c(1,2,3,4), "Low", 
+         ifelse(data_imputed_pooled_all$SCON %in% c(5,6,7,8), "Medium", 
+                "High"))
+
+
+
+

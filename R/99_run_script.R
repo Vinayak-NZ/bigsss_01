@@ -9,6 +9,8 @@ source("R/04_post_impute_single.R")
 
 ## ---- build-mixed-effects-models
 
+source("R/04_original_data_edit.R")
+source("R/05_build_mids_object.R")
 source("R/05_build_mixed_effects_models_pool.R")
 source("R/06_assumptions_test_mixed_effects.R")
 
@@ -23,3 +25,6 @@ source("R/05_build_gam_models.R")
 ## ---- visualise
 
 source("R/07_plot_relationship_wfi_scon.R")
+
+
+#Next steps: 1) Confirm quadratic term and 2) Tidy code, 3) Re-run bayesian models

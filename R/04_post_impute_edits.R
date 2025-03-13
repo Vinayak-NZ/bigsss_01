@@ -71,5 +71,8 @@ for (i in 1:length(data_imputed_output)){
                                                            "SCON", 
                                                            "WFI")]
   
+  data_imputed_output[[i]]$SCON_scaled <- scale(data_imputed_output[[i]]$SCON)[,1]
+  
+  data_imputed_output[[i]]$WFI_log <- log(data_imputed_output[[i]]$WFI + 1)
   
 }

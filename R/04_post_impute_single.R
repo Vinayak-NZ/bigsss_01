@@ -24,6 +24,9 @@ data_imputed_pooled_all <- melt(data_imputed_pooled_all,
                                 variable.name = "time", 
                                 value.name = c("SCON", "WFI"))
 
+
+data_imputed_pooled_all$group <- as.factor(data_imputed_pooled_all$Group)
+
 data_imputed_pooled_all[, "time"] <- ifelse(data_imputed_pooled_all[, "time"] == 1, 
                                             "baseline", "follow-up")
 
@@ -51,3 +54,16 @@ data_imputed_pooled_all[["stress"]] <- factor(data_imputed_pooled_all[["v_534"]]
                                                levels = c(1, 2, 3, 4, 5))
 
 data_imputed_pooled_all <- as.data.frame(data_imputed_pooled_all)
+
+data_imputed_pooled_all <- data_imputed_pooled_all[, c("id", 
+                                                         "group", 
+                                                         "sex", 
+                                                         "age_cat", 
+                                                         "time", 
+                                                         "stress", 
+                                                         "SCON", 
+                                                         "WFI")]
+
+data_imputed_pooled_all$SCON_scaled <- scale(data_imputed_pooled_all$SCON)
+
+data_imputed_pooled_all$WFI_log <- log(data_imputed_pooled_all$WFI + 1)
