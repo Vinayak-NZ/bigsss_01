@@ -1,5 +1,7 @@
 ## ---- post-impute-single
 
+scon_baseline <- data_imputed_pooled[, c("id", "SCON_T1")]
+
 data_imputed_pooled_all <- cbind(data_input[, exclude_vars], data_imputed_pooled)
 
 data_imputed_pooled_all <- data_imputed_pooled_all[, c("id", 
@@ -38,6 +40,8 @@ data_imputed_pooled_all[["stress"]] <- abs(as.numeric(data_imputed_pooled_all[["
 
 data_imputed_pooled_all[["WFI"]] <- abs(as.numeric(data_imputed_pooled_all[["WFI"]]))
 
+data_imputed_pooled_all[["SCON"]] <- abs(as.numeric(data_imputed_pooled_all[["SCON"]]))
+
 data_imputed_pooled_all[["age_cat"]] <- 
   ifelse(data_imputed_pooled_all[["Age"]] < 31, 1, 
          ifelse(data_imputed_pooled_all[["Age"]] >= 31 & 
@@ -67,3 +71,9 @@ data_imputed_pooled_all <- data_imputed_pooled_all[, c("id",
 data_imputed_pooled_all$SCON_scaled <- scale(data_imputed_pooled_all$SCON)
 
 data_imputed_pooled_all$WFI_log <- log(data_imputed_pooled_all$WFI + 1)
+
+data_imputed_pooled_all <- merge(data_imputed_pooled_all, scon_baseline, by = "id")
+
+data_imputed_pooled_all[["SCON_T1"]] <- abs(as.numeric(data_imputed_pooled_all[["SCON_T1"]]))
+
+data_imputed_pooled_all$SCON_T1_scaled <- scale(data_imputed_pooled_all$SCON_T1)
