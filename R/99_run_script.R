@@ -17,6 +17,7 @@ source("R/06_assumptions_test_mixed_effects.R")
 
 ## ---- build-bayesian-models
 
+source("R/05_build_bayesian_models_select_wfi.R")
 source("R/05_build_bayesian_models.R")
 source("R/05_build_bayesian_models_post_hoc.R")
 
