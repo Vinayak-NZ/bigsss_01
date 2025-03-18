@@ -68,7 +68,7 @@ data_imputed_pooled_all <- data_imputed_pooled_all[, c("id",
                                                          "SCON", 
                                                          "WFI")]
 
-data_imputed_pooled_all$SCON_scaled <- scale(data_imputed_pooled_all$SCON)
+data_imputed_pooled_all$SCON_scaled <- scale(data_imputed_pooled_all$SCON)[,1]
 
 data_imputed_pooled_all$WFI_log <- log(data_imputed_pooled_all$WFI + 1)
 
@@ -76,4 +76,4 @@ data_imputed_pooled_all <- merge(data_imputed_pooled_all, scon_baseline, by = "i
 
 data_imputed_pooled_all[["SCON_T1"]] <- abs(as.numeric(data_imputed_pooled_all[["SCON_T1"]]))
 
-data_imputed_pooled_all$SCON_T1_scaled <- scale(data_imputed_pooled_all$SCON_T1)
+data_imputed_pooled_all$SCON_T1_scaled <- scale(data_imputed_pooled_all$SCON_T1)[,1]
