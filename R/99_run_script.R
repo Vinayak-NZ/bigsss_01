@@ -19,9 +19,11 @@ source("R/06_assumptions_test_mixed_effects.R")
 
 ## ---- build-bayesian-models
 
+source("R/05_bayes_model_input.R")
 source("R/05_build_bayesian_models_select_wfi.R")
 source("R/05_build_bayesian_models.R")
 source("R/05_build_bayesian_models_post_hoc.R")
+source("R/07_output_bayes_model_stats.R")
 
 ## ---- build-gam-models
 

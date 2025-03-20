@@ -28,7 +28,7 @@ colour_vals <- c("#FFA500", "#00008B")
 ggplot(data_imputed_pooled_all, aes(x = SCON, y = WFI, color = factor(time))) +
   geom_point(alpha = 0.3, size = 4) +
   scale_color_manual(values = colour_vals, labels = c("Baeline", "Follow-up")) +
-  geom_smooth(method = "lm", formula = y ~ poly(x, 2), se = TRUE, size = 3) +
+  geom_smooth(method = "loess", se = TRUE, size = 3) +
   facet_wrap(~ group, labeller = labeller(group = group_labels)) +
   labs(
     title = "Non-Linear Relationship Between Self-Control and WFI",
