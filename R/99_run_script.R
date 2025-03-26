@@ -32,3 +32,5 @@ source("R/05_build_gam_models.R")
 ## ---- visualise
 
 source("R/07_plot_relationship_wfi_scon.R")
+source("R/07_bayes_conditional_plots.R")
+source("R/07_plot_relationship_wfi_scon.R")
