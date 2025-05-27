@@ -1,0 +1,34 @@
+ Family: gaussian 
+  Links: mu = log; sigma = identity 
+Formula: SCON ~ group * time + stress + age_cat + sex + (1 | id) 
+   Data: original_data (Number of observations: 1102) 
+  Draws: 4 chains, each with iter = 4000; warmup = 500; thin = 1;
+         total post-warmup draws = 14000
+
+Multilevel Hyperparameters:
+~id (Number of levels: 662) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     0.17      0.01     0.15     0.18 1.00     2847     6136
+
+Regression Coefficients:
+                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept                2.02      0.02     1.98     2.06 1.00     5435     7499
+group1                  -0.01      0.02    -0.04     0.02 1.00     4959     7045
+timefollowMup           -0.00      0.01    -0.02     0.02 1.00    14303    10439
+stress.L                -0.06      0.02    -0.10    -0.01 1.00     4151     6967
+stress.Q                 0.04      0.02    -0.00     0.08 1.00     4550     7147
+stress.C                -0.01      0.02    -0.04     0.03 1.00     4255     6928
+stressE4                -0.02      0.01    -0.05     0.01 1.00     4356     6377
+age_cat.L                0.08      0.04    -0.00     0.15 1.00     5208     7714
+age_cat.Q               -0.05      0.03    -0.11     0.01 1.00     5484     7047
+age_cat.C                0.03      0.02    -0.01     0.06 1.00     4291     6552
+sex2                     0.03      0.02    -0.00     0.06 1.00     4290     7184
+group1:timefollowMup    -0.02      0.01    -0.05     0.00 1.00    14973    10218
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.89      0.03     0.83     0.96 1.00     3384     7070
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).

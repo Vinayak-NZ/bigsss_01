@@ -29,6 +29,11 @@ source("R/07_output_bayes_model_stats.R")
 
 source("R/05_build_gam_models.R")
 
+## ---- build-complete-cases-bayes-model
+
+source("R/04_original_data_edit.R")
+
+
 ## ---- visualise
 
 source("R/07_plot_relationship_wfi_scon.R")
