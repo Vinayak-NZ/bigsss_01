@@ -4,22 +4,22 @@
 
 # create data frame of predictions (control for age, sex, stress)
 most_common_stress <- 
-  names(sort(table(data_imputed_long$stress), decreasing = TRUE))[1]
+  names(sort(table(data_imputed_pooled_all$stress), decreasing = TRUE))[1]
 
 most_common_age <- 
-  names(sort(table(data_imputed_long$age_cat), decreasing = TRUE))[1]
+  names(sort(table(data_imputed_pooled_all$age_cat), decreasing = TRUE))[1]
 
 most_common_sex <- 
-  names(sort(table(data_imputed_long$sex), decreasing = TRUE))[1]
+  names(sort(table(data_imputed_pooled_all$sex), decreasing = TRUE))[1]
 
-scale_SCON <- seq(min(data_imputed_long$SCON_scaled), 
-                  max(data_imputed_long$SCON_scaled), length.out = 3)
+scale_SCON <- seq(min(data_imputed_pooled_all$SCON_scaled), 
+                  max(data_imputed_pooled_all$SCON_scaled), length.out = 3)
 
 predictor_grid <- expand.grid(
   group = c(0, 1),  
   time = c('baseline', 'follow-up'),
-  SCON_scaled = seq(min(data_imputed_long$SCON_scaled), 
-                    max(data_imputed_long$SCON_scaled), length.out = 3),
+  SCON_scaled = seq(min(data_imputed_pooled_all$SCON_scaled), 
+                    max(data_imputed_pooled_all$SCON_scaled), length.out = 3),
   stress = most_common_stress,
   age_cat = most_common_age,
   sex = most_common_sex
@@ -62,11 +62,20 @@ ggplot(emmeans_summary, aes(x = time, y = predicted_mean, color = factor(group))
        y = "Predicted Work-Family Interference (WFI)", 
        color = "Group") + 
   scale_color_manual(values = c("red", "blue"), labels = c("Control", "Intervention")) +  
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"), 
-        plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
-        plot.subtitle = element_text(color = "#454543"),
-        plot.caption = element_text(color = "#454543", face = "italic")) 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(), 
+    axis.line = element_line(colour = "black"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
+    plot.subtitle = element_text(color = "#454543"),
+    plot.caption = element_text(color = "#454543", face = "italic")
+  )
+
 
 
 

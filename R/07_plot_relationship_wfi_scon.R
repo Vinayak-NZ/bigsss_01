@@ -11,12 +11,19 @@ ggplot(data_imputed_pooled_all, aes(x = SCON, y = WFI)) +
        y = "Work-Family Interference (WFI)") + 
   ylab("Work family interference") + 
   xlab("Self-control") + 
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"), 
-        plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
-        plot.subtitle = element_text(color = "#454543"),
-        plot.caption = element_text(color = "#454543", face = "italic"), 
-        legend.position = "none") 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(), 
+    axis.line = element_line(colour = "black"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
+    plot.subtitle = element_text(color = "#454543"),
+    plot.caption = element_text(color = "#454543", face = "italic")
+  )
 
 # by-group
 
@@ -36,11 +43,19 @@ ggplot(data_imputed_pooled_all, aes(x = SCON, y = WFI, color = factor(time))) +
     y = "Work-Family Interference (WFI)",
     color = "Time"
   ) + 
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"), 
-        plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
-        plot.subtitle = element_text(color = "#454543"),
-        plot.caption = element_text(color = "#454543", face = "italic")) 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(), 
+    axis.line = element_line(colour = "black"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
+    plot.subtitle = element_text(color = "#454543"),
+    plot.caption = element_text(color = "#454543", face = "italic")
+  )
 
 # by-group-SCON
 
@@ -63,8 +78,16 @@ ggplot(data_imputed_pooled_all, aes(x = SCON, y = WFI)) +
     y = "Work-Family Interference (WFI)",
     color = "Group"
   ) + 
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"), 
-        plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
-        plot.subtitle = element_text(color = "#454543"),
-        plot.caption = element_text(color = "#454543", face = "italic")) 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(), 
+    axis.line = element_line(colour = "black"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    plot.title = element_text(color = "#2F2E41", size = 12, face = "bold"),
+    plot.subtitle = element_text(color = "#454543"),
+    plot.caption = element_text(color = "#454543", face = "italic")
+  )
